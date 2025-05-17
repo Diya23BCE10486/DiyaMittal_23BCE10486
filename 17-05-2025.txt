@@ -1,0 +1,26 @@
+show databases;
+create database vit;
+use vit;
+CREATE TABLE vit_bhopal (
+    full_name VARCHAR(100),
+    reg_no VARCHAR(20) PRIMARY KEY,
+    school VARCHAR(100),
+    graduation_year INT
+);
+INSERT INTO vit_bhopal (full_name, reg_no, school, graduation_year) VALUES
+('Anushka Sharma', '23BCE10486', 'School of Computer Science and Engineering', 2027),
+('Anwesa Ray', '23BCE10349', 'School of Computer Science and Engineering', 2027),
+('Sia Bojewar', '23BCE11734', 'School of Mechanical Engineering', 2027),
+('Khushi Kapoor', '22BA11258', 'School of Computer Science', 2026);
+INSERT INTO vit_bhopal (full_name, reg_no, school, graduation_year) VALUES
+('Suhana Khan', '23BCE10255', 'School of Computer Science', 2027),
+('Aditi Rao', '21ECE14896', 'School of Electronics Engineering', 2025),
+('Sona Sinha', '20BBA1007', 'School of Business', 2024),
+('Avni Dua', '22BCE1008', 'School of Computer Science and engineering', 2026),
+('Dia Mirza', '21BIO1009', 'School of Bio Sciences', 2025);
+select * from vit_bhopal;
+alter table vit_bhopal add(phone varchar(10));
+desc vit_bhopal;
+alter table vit_bhopal drop column phone;
+alter table vit_bhopal add(s_country varchar(10) default 'India');
+update vit_bhopal set full_name='Diya Mittal' WHERE full_name='Anushka Sharma';
